@@ -6,7 +6,7 @@
 /*   By: kharada <kharada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 13:31:45 by kharada           #+#    #+#             */
-/*   Updated: 2026/05/04 11:42:19 by kharada          ###   ########.fr       */
+/*   Updated: 2026/05/04 13:28:03 by kharada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ static size_t	count_words(char const *s, char c)
 	size_t	i;
 	size_t	count;
 
+	if (c == '\0')
+	{
+		if (s[0] == '\0')
+			return (0);
+		return (1);
+	}
 	i = 0;
 	count = 0;
 	while (s[i] != '\0')
@@ -36,6 +42,8 @@ static size_t	word_len(char const *s, char c)
 	size_t	i;
 
 	i = 0;
+	if (c == '\0')
+		return (ft_strlen(s));
 	while (s[i] != '\0' && (s[i] != c))
 		i++;
 	return (i);

@@ -6,22 +6,13 @@
 /*   By: kharada <kharada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 13:55:33 by kharada           #+#    #+#             */
-/*   Updated: 2026/04/27 13:55:58 by kharada          ###   ########.fr       */
+/*   Updated: 2026/05/04 14:03:59 by kharada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// #include <unistd.h>
-
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-// int main(void)
-// {
-// 	ft_putchar_fd('A', 1);
-// 	ft_putchar_fd('\n', 1);
-// 	return (0);
-// }

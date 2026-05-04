@@ -6,14 +6,11 @@
 /*   By: kharada <kharada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 15:55:43 by kharada           #+#    #+#             */
-/*   Updated: 2026/04/27 17:17:11 by kharada          ###   ########.fr       */
+/*   Updated: 2026/05/04 13:51:06 by kharada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// #include <stdlib.h>
-// #include <stdio.h>
 
 static int	count_len(int n)
 {
@@ -63,19 +60,3 @@ char	*ft_itoa(int n)
 	}
 	return (s);
 }
-
-// int	main(void)
-// {
-// 	int		n1;
-// 	int		n2;
-// 	char	*s1;
-// 	char	*s2;
-
-// 	n1 = 123456;
-// 	n2 = -123456;
-// 	s1 = ft_itoa(n1);
-// 	s2 = ft_itoa(n2);
-// 	printf("%s\n", s1);
-// 	printf("%s\n", s2);
-// 	return (0);
-// }
