@@ -57,7 +57,7 @@ make re
 	戻り値:英字なら1。英字でなければ0。
 
 - ft_isdigit
-	`int	ft_isdigit(int c)`
+	`int	ft_isdigit(int c);`
 	数字かどうかを調べる。
 	引数:
 	`c` は、判定したい文字コード。
@@ -119,7 +119,7 @@ make re
 	戻り値：コピー先の先頭アドレス。
 
 - ft_memmove
-	`void	*ft_memmove(void *dest, const void *src, size_t n)`
+	`void	*ft_memmove(void *dest, const void *src, size_t n);`
 	重なりのあるメモリ領域でも安全にコピーする。
 	'ft_memcpy'とは異なり、コピー元とコピー先が重なっていても安全にコピーできる。
 	引数：
@@ -140,7 +140,7 @@ make re
 	戻り値：コピー元文字列の長さ。実際にコピーできた文字数ではなく、本来コピーした文字列の長さ。
 
 - ft_strlcat
-	`size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);`
+	`size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);`
 	`dst`の末尾に`src`を連結する。ただし、`dstsize`を超えないように連結する。可能なら最後に`'\0'`を入れる
 	引数:
 	`dst` は、連結先の文字列バッファ。
@@ -169,7 +169,7 @@ make re
 
 - ft_strchr
 	`char	*ft_strchr(const char *s, int c);`
-	文字列`s`の中から`c`が最初に現れる位置を探す。終端文字列y`'\0'`も検索対象になる。
+	文字列`s`の中から`c`が最初に現れる位置を探す。終端文字列`'\0'`も検索対象になる。
 	引数：
 	`s` は、検索対象の文字列。
 	`c` は、探したい文字コード。
@@ -227,7 +227,13 @@ make re
 
 - ft_calloc
 	`void	*ft_calloc(size_t count, size_t size);`
-	`count * size`バイト分のメモリを確保する。確保したメモリ全体を0で初期化する。`count * size`が`size_t`の範囲を超える場合は、確保してはいけない。`count`または`size`が0の場合でも、`free`できる一意なポインタを返す。
+	`count * size` バイト分のメモリを確保し、確保したメモリ全体を0で初期化する。
+	引数:
+	`count` は、確保したい要素の数。
+	`size` は、1つの要素あたりのバイト数。
+	戻り値:
+	確保して0で初期化されたメモリ領域へのポインタ。
+	メモリ確保に失敗した場合、または `count * size` が `size_t` の範囲を超える場合はNULL。
 
 - ft_strdup
 	`char	*ft_strdup(const char *s);`
@@ -249,10 +255,13 @@ make re
 	戻り値:連結後の新しい文字列。メモリ確保に失敗した場合はNULL。
 
 - ft_strtrim
-	`char	*ft_strtrim(char const *s1, char const *set)`
+	`char	*ft_strtrim(char const *s1, char const *set);`
 	`s1`の先頭と末尾から、`set`に含まれる文字を取り除く。文字列の途中にある文字は取り除かない。
 	引数:
 	`s1` は、処理対象の文字列。`set` は、取り除きたい文字の集合。
+	戻り値:
+	先頭と末尾の指定文字を取り除いた新しい文字列。
+	メモリ確保に失敗した場合はNULL。
 
 - ft_split
 	`char **ft_split(char const *s, char c);`
@@ -408,16 +417,13 @@ make re
 	新しく作ったリストの先頭要素へのポインタ。
 	メモリ確保に失敗した場合はNULL。
 
-
-
-
 ## Resources
 
 このプロジェクトでは、以下の資料を参考にしました。
 
 - 42 Libft subject
 - Linux man pages
-- GNU Make documentation
+- GNU Make に関する資料
 - C言語の標準ライブラリに関する資料
 - ポインタ、メモリ管理、静的ライブラリ、連結リストに関する資料
 
