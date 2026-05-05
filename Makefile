@@ -6,7 +6,7 @@
 #    By: kharada <kharada@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: Invalid date        by kharada           #+#    #+#              #
-#    Updated: 2026/05/05 11:21:48 by kharada          ###   ########.fr        #
+#    Updated: 2026/05/05 11:55:24 by kharada          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,4 +81,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+# .PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
