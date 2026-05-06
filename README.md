@@ -131,7 +131,7 @@ make re
 - ft_strlcpy
 	`size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);`
 	文字列を指定サイズ内でコピーする。
-	コピー先のサイズが０より大きければ、最後に`'\0'`を入れる。
+	コピー先のサイズが 0 より大きければ、最後に`'\0'`を入れる。
 	引数:
 	`dst` は、コピー先の文字列バッファ。
 	`src` は、コピー元の文字列。

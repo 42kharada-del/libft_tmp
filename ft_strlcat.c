@@ -6,7 +6,7 @@
 /*   By: kharada <kharada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 10:29:13 by kharada           #+#    #+#             */
-/*   Updated: 2026/05/04 10:00:39 by kharada          ###   ########.fr       */
+/*   Updated: 2026/05/06 12:49:44 by kharada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dlen++;
 	slen = ft_strlen(src);
 	if (dlen == dstsize)
-		return (dlen + slen);
+		return (dstsize + slen);
 	i = 0;
 	while (src[i] != '\0' && (dlen + i + 1 < dstsize))
 	{
