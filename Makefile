@@ -6,7 +6,7 @@
 #    By: kharada <kharada@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: Invalid date        by kharada           #+#    #+#              #
-#    Updated: 2026/05/05 14:47:05 by kharada          ###   ########.fr        #
+#    Updated: 2026/05/07 07:40:46 by kharada          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,8 @@ $(NAME): $(OBJS)
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
+bonus: $(NAME)
+
 clean:
 	$(RM) $(OBJS)
 
@@ -79,4 +81,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+# .PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
